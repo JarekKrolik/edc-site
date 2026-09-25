@@ -712,6 +712,49 @@ h6 {
 
 	.services__grid {
 		grid-template-columns: repeat(4, 1fr);
+		gap: 0;
+		overflow: hidden;
+		border-radius: var(--radius-image);
+	}
+
+	.service {
+		gap: 0.75rem;
+	}
+
+	.service__image-link {
+		display: block;
+		line-height: 0;
+	}
+
+	.service__image {
+		display: block;
+		border-radius: 0;
+	}
+
+	.service:not(:last-child) .service__title,
+	.service:not(:last-child) .service__text {
+		border-right: 0;
+	}
+
+	.service:not(:first-child) .service__title,
+	.service:not(:first-child) .service__text {
+		border-radius: 0;
+	}
+
+	.service:first-child .service__title {
+		border-radius: var(--radius-md) 0 0 0;
+	}
+
+	.service:first-child .service__text {
+		border-radius: 0 0 0 var(--radius-md);
+	}
+
+	.service:last-child .service__title {
+		border-radius: 0 var(--radius-md) 0 0;
+	}
+
+	.service:last-child .service__text {
+		border-radius: 0 0 var(--radius-md) 0;
 	}
 }
 
